@@ -11,6 +11,16 @@ module.exports = function (source) {
   var options = loaderUtils.parseQuery(this.query) || {};
   var self = this;
 
+  if (this.cacheable()) {
+    this.cacheable();
+  }
+
+  var data = readProto(source, options);
+  var builder = ProtoBuf.newBuilder(protoUtil.getBuilderOptions(options, 'using'));
+  builder['import'](data);
+
+  return 'module.exports = ' + protoTarget(builder, options) + ';';
+
   function readProto(src, options, loaded) {
     var parser = new ProtoBuf.DotProto.Parser(src),
       data = parser.parse();
@@ -46,13 +56,4 @@ module.exports = function (source) {
     return data;
   }
 
-  if (this.cacheable()) {
-    this.cacheable();
-  }
-
-  var data = readProto(source, options);
-  var builder = ProtoBuf.newBuilder(protoUtil.getBuilderOptions(options, 'using'));
-  builder['import'](data);
-
-  return 'module.exports = ' + protoTarget(builder, options) + ';';
 };
