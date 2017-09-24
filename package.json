@@ -24,7 +24,7 @@
   },
   "peerDependencies": {
     "webpack": "^1.12.9",
-    "protobufjs": "^5.0.0"
+    "protobufjs": "^6.8.2"
   },
   "dependencies": {
     "loader-utils": "^0.2.11"
