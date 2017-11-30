@@ -39,7 +39,7 @@ module.exports = function (source) {
           return;
         }
 
-        fileName = path.resolve(self.context + '/' + imp);
+        fileName = path.resolve((options.root || self.context) + '/' + imp);
         if (fs.existsSync(fileName)) {
           if (loaded[fileName]) {
             data.imports[index] = {};

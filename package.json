@@ -1,6 +1,6 @@
 {
   "name": "proto-loader",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Protocol Buffer loader module for webpack",
   "main": "index.js",
   "keywords": [
@@ -24,7 +24,7 @@
   },
   "peerDependencies": {
     "webpack": "^1.12.9",
-    "protobufjs": "^6.8.2"
+    "protobufjs": "^5.0.2"
   },
   "dependencies": {
     "loader-utils": "^0.2.11"
