@@ -11,6 +11,9 @@
     "buffer"
   ],
   "author": "Brian Chirls @bchirls",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine JASMINE_CONFIG_PATH=jasmine.json"
+  },
   "license": "MIT",
   "licenses": [
     {
@@ -27,6 +30,7 @@
     "protobufjs": "^5.0.2"
   },
   "dependencies": {
-    "loader-utils": "^0.2.11"
+    "loader-utils": "^0.2.11",
+    "jasmine": "^2.9.0"
   }
 }
