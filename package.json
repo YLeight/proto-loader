@@ -12,7 +12,7 @@
   ],
   "author": "Brian Chirls @bchirls",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine JASMINE_CONFIG_PATH=jasmine.json"
+    "test": "./node_modules/.bin/jest"
   },
   "license": "MIT",
   "licenses": [
@@ -30,7 +30,14 @@
     "protobufjs": "^5.0.2"
   },
   "dependencies": {
-    "loader-utils": "^0.2.11",
-    "jasmine": "^2.9.0"
+    "loader-utils": "^0.2.11"
+  },
+  "devDependencies": {
+    "babel-jest": "^22.1.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.1.4",
+    "memory-fs": "^0.4.1",
+    "protobufjs": "^5.0.2",
+    "webpack": "^3.10.0"
   }
 }
